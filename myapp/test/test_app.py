@@ -26,11 +26,11 @@ testdata = [
     ([4, 16, 9, 5, 1, 7], [1, 4, 5, 7, 9, 16]),
     ([6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6]),
     ([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]),
-     ([], [])
+     ([], 'Lista jest pusta')
      ]
 @pytest.mark.parametrize('sample, result', testdata)
 def test_bubble_sort(sample, result):
     try:
         assert app.bubble_sort(sample) == result
     except:
-        assert ValueError('Lista jest pusta')
+        assert 'Lista jest pusta' == result
